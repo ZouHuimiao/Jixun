@@ -13,8 +13,7 @@
 3. 找到 MyApp 并取消订阅。
 
 ## 联系开发者
-- 邮箱：support@myapp.com  
-- [提交问题](#)
+- 邮箱：zouhuimiao0808@icloud.com  
 
 ## 隐私政策
 [查看隐私政策](#)
