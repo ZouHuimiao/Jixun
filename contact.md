@@ -3,7 +3,7 @@
 ---
 
 ### **技术支持邮箱**  
-- **优先级问题**：zouhuimiao0808@icloud.com
+- **如您在使用过程中有任何疑问或建议**：zouhuimiao0808@icloud.com
 
 ---
 
