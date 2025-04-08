@@ -37,7 +37,7 @@
   <!-- 隐藏字段配置 -->
   <input type="hidden" name="_captcha" value="false"> <!-- 关闭验证码 -->
   <input type="hidden" name="_subject" value="极训Jixun用户反馈"> <!-- 自定义邮件标题 -->
-  <input type="hidden" name="_next" value="https://your-github-pages-url/thank-you.html"> <!-- 提交后跳转页（可选） -->
+  <input type="hidden" name="_next" value="https://zouhuimiao.github.io/thank-you.html"> <!-- 提交后跳转页（可选） -->
 
   <div class="form-group">
     <textarea 
