@@ -37,7 +37,7 @@
   <!-- 隐藏字段配置 -->
   <input type="hidden" name="_captcha" value="false">
   <input type="hidden" name="_subject" value="极训Jixun用户反馈">
-  <input type="hidden" name="_next" value="https://zouhuimiao.github.io/thank-you.html">
+  <input type="hidden" name="_next" value="https://zouhuimiao.github.io/thank-you.md">
   <input type="hidden" name="_template" value="table"> <!-- 美化邮件格式 -->
 
   <div class="form-group">
