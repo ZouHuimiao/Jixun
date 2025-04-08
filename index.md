@@ -35,9 +35,10 @@
 
 <form id="feedback-form" action="https://formsubmit.co/zouhuimiao0808@icloud.com" method="POST">
   <!-- 隐藏字段配置 -->
-  <input type="hidden" name="_captcha" value="false"> <!-- 关闭验证码 -->
-  <input type="hidden" name="_subject" value="极训Jixun用户反馈"> <!-- 自定义邮件标题 -->
-  <input type="hidden" name="_next" value="https://zouhuimiao.github.io/thank-you.html"> <!-- 提交后跳转页（可选） -->
+  <input type="hidden" name="_captcha" value="false">
+  <input type="hidden" name="_subject" value="极训Jixun用户反馈">
+  <input type="hidden" name="_next" value="https://zouhuimiao.github.io/thank-you.html">
+  <input type="hidden" name="_template" value="table"> <!-- 美化邮件格式 -->
 
   <div class="form-group">
     <textarea 
@@ -61,17 +62,14 @@
 </form>
 
 <script>
-  const form = document.getElementById('feedback-form');
-  form.addEventListener('submit', (e) => {
-    e.preventDefault();
-    fetch(form.action, {
-      method: 'POST',
-      body: new FormData(form),
-    }).then(() => {
-      alert('✅ 提交成功！感谢您的反馈');
-      form.reset();
-    }).catch(() => {
-      alert('❌ 提交失败，请直接邮件联系：zouhuimiao0808@icloud.com');
-    });
+  // 备用本地跳转逻辑（当Formsubmit不可用时）
+  document.getElementById('feedback-form').addEventListener('submit', function(e) {
+    localStorage.setItem('formSubmitted', 'true');
   });
+  
+  // 检查是否是从感谢页面返回的
+  if(localStorage.getItem('formSubmitted')) {
+    alert('✅ 您的反馈已提交成功！');
+    localStorage.removeItem('formSubmitted');
+  }
 </script>
