@@ -33,7 +33,12 @@
 ### 意见反馈
 请填写以下表单，您的建议将直接发送至开发者邮箱：
 
-<form id="feedback-form" action="https://formspree.io/f/your-formspree-id" method="POST">
+<form id="feedback-form" action="https://formsubmit.co/zouhuimiao0808@icloud.com" method="POST">
+  <!-- 隐藏字段配置 -->
+  <input type="hidden" name="_captcha" value="false"> <!-- 关闭验证码 -->
+  <input type="hidden" name="_subject" value="极训Jixun用户反馈"> <!-- 自定义邮件标题 -->
+  <input type="hidden" name="_next" value="https://your-github-pages-url/thank-you.html"> <!-- 提交后跳转页（可选） -->
+
   <div class="form-group">
     <textarea 
       class="feedback-input" 
@@ -55,81 +60,18 @@
   <button type="submit" class="feedback-button">提交反馈</button>
 </form>
 
-<div id="form-status" class="form-status"></div>
-
-<style>
-  .form-group {
-    margin-bottom: 1rem;
-  }
-
-  .feedback-input {
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    font-size: 16px;
-    margin: 8px 0;
-  }
-
-  .feedback-button {
-    background: linear-gradient(135deg, #007BFF, #800080);
-    color: white;
-    padding: 12px 24px;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    font-size: 16px;
-    transition: opacity 0.3s;
-  }
-
-  .feedback-button:hover {
-    opacity: 0.9;
-  }
-
-  .form-status {
-    margin-top: 1rem;
-    padding: 12px;
-    border-radius: 8px;
-    display: none;
-  }
-
-  .success { background: #e6ffe6; color: #2a752a; }
-  .error { background: #ffe6e6; color: #752a2a; }
-</style>
-
 <script>
   const form = document.getElementById('feedback-form');
-  const statusDiv = document.getElementById('form-status');
-
-  form.addEventListener('submit', async (e) => {
+  form.addEventListener('submit', (e) => {
     e.preventDefault();
-    
-    // 禁用按钮防止重复提交
-    const submitBtn = form.querySelector('button[type="submit"]');
-    submitBtn.disabled = true;
-    submitBtn.textContent = '提交中...';
-
-    try {
-      const response = await fetch(form.action, {
-        method: 'POST',
-        body: new FormData(form),
-        headers: { 'Accept': 'application/json' }
-      });
-
-      if (response.ok) {
-        statusDiv.textContent = '✅ 提交成功！感谢您的反馈';
-        statusDiv.className = 'form-status success';
-        form.reset();
-      } else {
-        throw new Error('提交失败');
-      }
-    } catch (error) {
-      statusDiv.textContent = '❌ 提交失败，请直接邮件联系：zouhuimiao0808@icloud.com';
-      statusDiv.className = 'form-status error';
-    } finally {
-      statusDiv.style.display = 'block';
-      submitBtn.disabled = false;
-      submitBtn.textContent = '提交反馈';
-    }
+    fetch(form.action, {
+      method: 'POST',
+      body: new FormData(form),
+    }).then(() => {
+      alert('✅ 提交成功！感谢您的反馈');
+      form.reset();
+    }).catch(() => {
+      alert('❌ 提交失败，请直接邮件联系：zouhuimiao0808@icloud.com');
+    });
   });
 </script>
