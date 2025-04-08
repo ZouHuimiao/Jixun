@@ -48,7 +48,7 @@
     <!-- 隐藏字段配置 -->
     <input type="hidden" name="_captcha" value="false">
     <input type="hidden" name="_subject" value="极训Jixun用户反馈">
-    <input type="hidden" name="_next" value="https://zouhuimiao.github.io/jixun/thank-you.html">
+    <input type="hidden" name="_next" value="https://zouhuimiao.github.io/Jixun/thank-you.html">
     <input type="hidden" name="_template" value="table">
 
     <div class="form-group floating">
