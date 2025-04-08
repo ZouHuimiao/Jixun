@@ -30,7 +30,7 @@
 
 ---
 
-## 意见反馈
+### 意见反馈
 请填写以下表单，您的建议将直接发送至开发者邮箱：
 
 <form id="feedback-form" action="https://formspree.io/f/your-formspree-id" method="POST">
