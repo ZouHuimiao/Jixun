@@ -31,7 +31,8 @@
 - [使用条款](terms.md)
 - [隐私政策](privacy.md)  
 - [常见问题](faq.md)  
-- [联系开发者](contact.md)  
+- [联系开发者](contact.md)
+- [最终用户许可协议](https://www.apple.com/legal/internet-services/itunes/dev/stdeula/)
 
 ---
 
